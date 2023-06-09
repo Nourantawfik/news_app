@@ -137,11 +137,11 @@ Widget buildArticleItem(List, context, {isSearch}) => ConditionalBuilder(
       ) =>
           ListView.separated(
               physics: BouncingScrollPhysics(),
-              itemBuilder: (BuildContext context, index) =>Text('heloo' , style: Theme.of(context).textTheme.bodyText1,) ,
-                  // Padding(
-                  //   padding: const EdgeInsets.all(8.0),
-                  //   child: buildArticle(List[index], context , index),
-                  // ),
+               itemBuilder: (BuildContext context, index) =>
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: buildArticle(List[index], context , index),
+                  ),
               separatorBuilder: (BuildContext context, index) => MyDivider(),
               itemCount: 200),
       fallback: (BuildContext context) =>
